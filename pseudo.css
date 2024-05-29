@@ -1,0 +1,48 @@
+
+div{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+section{
+    display: flex;
+}
+
+p{
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.firstElement{
+    margin: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+
+.firstElement:first-child{
+    background-color: lightblue;
+}
+
+.firstElement:last-child{
+    background-color: black;
+}
+
+.firstElement:nth-child(3){
+    background-color: palevioletred;
+}
+.firstElement:hover{
+    background-color: red;
+    scale: 1.2;
+}
+
+.firstElement:hover p{
+    scale: 1.2;
+}
+

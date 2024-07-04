@@ -3,6 +3,16 @@
     <head>
         <script src = "./jquery-min.js"></script>
     </head>
+    <style>
+        .description{
+            display: none;
+        }
+        .accordion{
+            background-color : black;
+            color : aliceblue;
+            width : 200px
+        }
+    </style>
     <body>
         <form id = "myform">
             <h1>jQuery Practie</h1>
@@ -11,8 +21,18 @@
             <button type = "submit" id = "btn1">Click Me</button>
         </form>
         <p id = "p1">This is a paragraph.</p>
+        <p>Simple Accordion</p>
+        <div class = "accordion">
+            <div class = "header">Title</div>
+            <div class = "description">This is the description for the accordion.</div>
+        </div>
         <script>
             $(document).ready(function(){
+                //showing the according description
+                $('.header').click(function () {
+                    $('.description').slideDown()
+                    $('.description').slideToggle()
+                })
                 $("#btn1").mouseenter(function(){
                     $("#p1").show();
                 });
